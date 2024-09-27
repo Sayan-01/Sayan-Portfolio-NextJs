@@ -6,7 +6,6 @@ import { LeftCurve } from "./design/Collaboration";
 import { check } from "../../public";
 import Image from "next/image";
 
-
 const Skills = () => {
   const program = [
     { title: "html", url: "" },
@@ -32,7 +31,7 @@ const Skills = () => {
     { title: "Software engineering", id: 3 },
     { title: "Teaching", id: 1 },
     { title: "Drawing", id: 2 },
-    {title: 'Freelancing', id:3}
+    { title: "Freelancing", id: 3 },
   ];
   return (
     <Section
@@ -59,9 +58,7 @@ const Skills = () => {
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
           {/* / */}
           <div className="  relative left-1/2 flex md:w-[32rem] w-[22.1rem] aspect-square rounded-full -translate-x-1/2 scale:75 md:scale-100 -top-10 md:top-0  md:mt-10 lg:mt-6 mt-20">
-            
-              <Program className={""} />
-            
+            <Program className={""} />
 
             <LeftCurve />
             {/* <RightCurve /> */}

@@ -51,7 +51,7 @@ const Header = () => {
           href="#hero"
         >
           <Image
-          className="w-[7.2rem] aspect-auto"
+            className="w-[7.2rem] aspect-auto"
             src="/logo.png"
             alt="logo"
             width={600}
