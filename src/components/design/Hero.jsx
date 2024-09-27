@@ -12,15 +12,15 @@ export const Gradient = () => {
   );
 };
 
-export const BottomLine = () => {
+export const BottomLine = ({className}) => {
   return (
-    <>
-      <div className="hidden absolute top-[50rem] left-10 right-10 h-0.25 bg-n-6 pointer-events-none xl:block" />
+    <div className={`${className}`}>
+      <div className="hidden absolute left-10 right-10 h-0.25 bg-n-6 pointer-events-none xl:block" />
 
-      <PlusSvg className="hidden absolute top-[49.6375rem] left-[2.1875rem] z-2 pointer-events-none xl:block" />
+      <PlusSvg className="hidden absolute top-[-0.306rem] left-[2.1875rem] z-2 pointer-events-none xl:block" />
 
-      <PlusSvg className="hidden absolute top-[49.6375rem] right-[2.1875rem] z-2 pointer-events-none xl:block" />
-    </>
+      <PlusSvg className="hidden absolute top-[-0.306rem] right-[2.1875rem] z-2 pointer-events-none xl:block" />
+    </div>
   );
 };
 

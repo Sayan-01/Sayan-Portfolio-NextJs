@@ -5,6 +5,7 @@ import Program from "./Program";
 import { LeftCurve } from "./design/Collaboration";
 import { check } from "../../public";
 import Image from "next/image";
+import { BottomLine } from "./design/Hero";
 
 const Skills = () => {
   const program = [
@@ -36,7 +37,7 @@ const Skills = () => {
   return (
     <Section
       id={"skills"}
-      customPadding={"py-14 lg:py-16 xl:py-[8rem] -mb-4"}
+      customPadding={"py-14 lg:py-16 xl:py-[10rem] -mb-4"}
     >
       <div className="container lg:flex ">
         <div className=" max-w-[30rem]">
@@ -56,14 +57,10 @@ const Skills = () => {
           <p className="body-2 text-n-4 lg:w-[22rem]  mt-10">With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.</p>
         </div>
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
-          {/* / */}
           <div className="  relative left-1/2 flex md:w-[32rem] w-[22.1rem] aspect-square rounded-full -translate-x-1/2 scale:75 md:scale-100 -top-10 md:top-0  md:mt-10 lg:mt-6 mt-20">
             <Program className={""} />
-
             <LeftCurve />
-            {/* <RightCurve /> */}
           </div>
-          {/* / */}
         </div>
       </div>
     </Section>

@@ -59,6 +59,8 @@ const Project = () => {
     <Section
       id={"projects"}
       customPadding={"md:pb-28 pb-16 pt-20"}
+      crosses
+      sectionLine={"relative top-[8rem]"}
     >
       <div className="container md:pb-0 lg:pb">
         <div>

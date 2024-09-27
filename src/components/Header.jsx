@@ -84,12 +84,10 @@ const Header = () => {
         >
           @Sayandas
         </Link>
-        <Button
-          className="hidden lg:flex text-sm"
-          href="#login"
-        >
-          Contact
-        </Button>
+        
+        <Link href="#contact">
+          <Button className="hidden lg:flex text-sm">Contact</Button>
+        </Link>
 
         <Button
           white={false}

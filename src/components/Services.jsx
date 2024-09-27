@@ -16,7 +16,6 @@ const services = [
 const Services = () => {
   return (
     <Section
-      crosses={"crosses"}
       customPadding={"pt-10 lg:pt-16 xl:pt-20 -mb-40"}
       id={"services"}
     >

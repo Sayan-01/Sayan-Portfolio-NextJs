@@ -34,7 +34,11 @@ import {
   telegram,
   twitter,
   yourlogo,
-} from "../assets";
+} from "../../public"
+import { GoClock, GoDatabase, GoLock } from "react-icons/go";
+import { SlLocationPin } from "react-icons/sl";
+import { TbSeo } from "react-icons/tb";
+import { AiOutlineMail } from "react-icons/ai";
 
 export const navigation = [
   {
@@ -325,4 +329,15 @@ export const socials = [
     iconUrl: facebook,
     url: "#",
   },
+];
+
+export const contact_feature = [
+  { id: 1, title: "Completion Time", description: "24/7 for Email and live chat", logo: <GoClock /> },
+  { id: 2, title: "Address", description: "howrah, Westbengal, India", logo: <SlLocationPin /> },
+  { id: 3, title: "Email", description: "sayandas61668@gmail.com", logo: <AiOutlineMail /> },
+];
+export const contact_feature_2 = [
+  { id: 1, title: "SEO optimise", description: "Organic Traffic Growth", logo: <TbSeo /> },
+  { id: 2, title: "Scalable", description: "Follow scalable architecture", logo: <GoDatabase /> },
+  { id: 3, title: "Advance UI/UX", description: "Engaging modern design", logo: <GoLock /> },
 ];

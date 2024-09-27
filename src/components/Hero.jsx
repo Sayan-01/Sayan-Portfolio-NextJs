@@ -9,15 +9,17 @@ const Hero = () => {
   return (
     <Section
       id={"home"}
-      className={"pt-[12rem] -mt-[5.25rem] lg:mt-0"}
+      className={"pt-[7.1rem] -mt-[5.25rem]  lg:mt-0 "}
       customPadding
-      crosses={"crosses"}
+      crosses
+      sectionLine={"relative -top-[25rem]"}
     >
-      <div className=" container relative">
+      <BottomLine className={"relative -top-[7.0rem]"} />
+      <div className=" container relative ">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
           <div className="h1 mb-6">
-            <h1>Convert your Dream </h1>in Web Dev with
-            <span className=" inline-block relative ">{" "}
+            <h1>Convert your Dream </h1>in Web Dev with{" "}
+            <span className=" inline-block relative ">
               Sayan Das
               <Image
                 src={curve}
@@ -65,7 +67,6 @@ const Hero = () => {
           <BackgroundCircles />
         </div>
       </div>
-      <BottomLine />
       <p className=" hidden md:block md:mt-20 w-full text-center font-code text-white/50 text-sm uppercase">Helping People To Build There Own Website</p>
     </Section>
   );
