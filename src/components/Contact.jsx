@@ -11,7 +11,7 @@ const Contact = () => {
       crosses
       sectionLine={"relative top-0"}
     >
-      <div className="container -mt-16 md:mt-0 mb-20">
+      <div className="container  md:mt-0 mb-20">
         <h2 className="h2 w-full md:text-center">Contact With Me</h2>
         <p className="body-2 text-n-4 md:text-center md:mb-20 mb-[56px] mt-4">Full-stack developer build mordern, high-performance websites with seamless user experiences.</p>
         <div className="flex flex-col md:flex-row">
