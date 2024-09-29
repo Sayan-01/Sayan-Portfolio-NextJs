@@ -1,7 +1,13 @@
 import React from "react";
 import Section from "./Section";
-import Image from "next/image";
-import { curve } from "../../public";
+import { HiCubeTransparent, HiOutlineLightBulb, HiOutlinePaperAirplane, HiOutlineStar } from "react-icons/hi2";
+
+import { Bebas_Neue } from "next/font/google";
+
+const anton = Bebas_Neue({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const About = () => {
   return (
@@ -17,53 +23,46 @@ const About = () => {
         <div>
           {[
             {
-              title: "1_Experience",
-              description:
-                "The powerhouse of AI tech, creative audacity, business mindset. We work with everything digital and help you turn innovative ideas, products, services, and processes into a profitable business then support you to scale it from pre-seed to series D and beyond.",
-              about: (
-                <div className="text-center">
-                  <h2 className=" font-semibold text-lg">Narula Institute of Technology, Agarpara(West Bengal)</h2>
-                  <p>Bachelor of Technology - BTech, Computer Science and Engineering Oct 2023 - ongoing</p>
-                </div>
-              ),
+              id: "01",
+              title: "Experience",
+              description: "Currently working at Azeorex as the CEO and Developer, a company co-founded by me.",
+              tag: ["Web Development", "Web Design", "CEO", "Full Stack Developer"],
+              icon: <HiOutlineLightBulb />,
             },
             {
-              title: "1_Collage",
-              description:
-                "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Narula Institute of Technology, Kolkata. I have completed 2 semesters. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
-              about: (
-                <div className="text-center">
-                  <h2 className=" font-semibold text-lg">Narula Institute of Technology, Agarpara(West Bengal)</h2>
-                  <p>Bachelor of Technology - BTech, Computer Science and Engineering Oct 2023 - ongoing</p>
-                </div>
-              ),
+              id: "02",
+              title: "Collage",
+              description: "I am currently pursuing B.Tech in Computer Science & Engineering at Narula institute of Technology",
+              tag: ["B.Tech", "DSA", "Computer Science", "OOPs", "DBMS"],
+              icon: <HiCubeTransparent />,
             },
             {
-              title: "2_Schooling",
-              description:
-                "The powerhouse of AI tech, creative audacity, business mindset. We work with everything digital and help you turn innovative ideas, products, services, and processes into a profitable business then support you to scale it from pre-seed to series D and beyond.",
+              id: "03",
+              title: "Schooling",
+              description: "I completed my class 10+12 form Sri Ramkrisna Sikshalaya, Howrah with PCMB.",
+              tag: ["Class 10", "Class 12", "Mathematics", "WBBSE", "PCMB"],
+              icon: <HiOutlineStar />,
             },
           ].map((item) => {
             return (
-              <div className="flex border-b border-n-2/40 py-5">
-                <div className="w-[22rem] px-8 flex flex-col items-center justify-center border-white/40 border-r">
-                  <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center border-2 border-white/40 mb-4">
-                    <div className="w-[60px] h-[60px] rounded-full border-2 border-white/40"></div>
-                  </div>
-                  {item.about}
+              <div className="flex flex-col lg:flex-row items-center justify-between py-10 border-b border-white/10">
+                <div className={`${anton.className} flex lg:gap-10 gap-5  items-start mr-10`}>
+                  <div className="decoration-2 underline text-[#7A89D3] lg:text-2xl text-xl font-bold relative lg:bottom-[34px] bottom-[23px]">{item.id}</div>
+                  <div className={`lg:text-[110px] text-[70px] lg:w-[370px] w-[216px]`}>{item.title}</div>
                 </div>
-                <div className="w-full px-8 border-white/40 border-r">
-                  <div className="relative inline-block mb-4">
-                    <div className="mb-4 font-bold text-[2rem] italic">{item.title}</div>
-                    <Image
-                      src={curve}
-                      className="absolute top-full left-0 w-full xl:-mt-2"
-                      width={624}
-                      height={28}
-                      alt="Curve"
-                    />
+                <div className="flex items-center justify-between ml-8">
+                  <div className="w-[60px] mr-8 h-[60px] md:border-2 border border-[#878AB6] rounded-full flex items-center justify-center text-3xl text-yellow-200">{item.icon}</div>
+                  <p className=" font-semibold text-[#878AB6] w-[330px]">{item.description}</p>
+                </div>
+                <div className="flex items-center gap-4 ">
+                  <div className="flex gap-4 flex-wrap w-[240px]">
+                    {item.tag.map((tag) => {
+                      return <div className="  py-2 px-4 md:border-2 border text-[#878AB6] border-[#878ab6] font-semibold rounded-3xl">{tag}</div>;
+                    })}
                   </div>
-                  <div>{item.description}</div>
+                  <div className="hidden w-[80px] text-orange-400 h-[80px] rounded-full xl:flex items-center justify-center md:border-2 border border-white/40 mb-4">
+                    <HiOutlinePaperAirplane size={26} />
+                  </div>
                 </div>
               </div>
             );
