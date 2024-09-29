@@ -31,7 +31,7 @@ const About = () => {
             },
             {
               id: "02",
-              title: "Collage",
+              title: "College",
               description: "I am currently pursuing B.Tech in Computer Science & Engineering at Narula institute of Technology",
               tag: ["B.Tech", "DSA", "Computer Science", "OOPs", "DBMS"],
               icon: <HiCubeTransparent />,
@@ -46,7 +46,7 @@ const About = () => {
           ].map((item) => {
             return (
               <div className="flex flex-col gap-y-6 md:flex-row md:flex-wrap  items-center min-[1380px]:justify-between justify-center py-10 border-b border-white/10">
-                <div className={`${anton.className} flex lg:gap-10 gap-5  items-start mr-10`}>
+                <div className={`${anton.className} flex lg:gap-10 gap-2  items-start min-1380px:mr-10`}>
                   <div className="decoration-2 underline text-[#7A89D3] lg:text-2xl text-xl font-bold relative lg:bottom-[34px] bottom-[23px]">{item.id}</div>
                   <div className={`lg:text-[110px] text-[70px] lg:w-[370px] md:w-[216px]`}>{item.title}</div>
                 </div>
