@@ -45,17 +45,17 @@ const About = () => {
             },
           ].map((item) => {
             return (
-              <div className="flex flex-col lg:flex-row items-center justify-between py-10 border-b border-white/10">
+              <div className="flex flex-col gap-y-6 md:flex-row md:flex-wrap  items-center min-[1380px]:justify-between justify-center py-10 border-b border-white/10">
                 <div className={`${anton.className} flex lg:gap-10 gap-5  items-start mr-10`}>
                   <div className="decoration-2 underline text-[#7A89D3] lg:text-2xl text-xl font-bold relative lg:bottom-[34px] bottom-[23px]">{item.id}</div>
-                  <div className={`lg:text-[110px] text-[70px] lg:w-[370px] w-[216px]`}>{item.title}</div>
+                  <div className={`lg:text-[110px] text-[70px] lg:w-[370px] md:w-[216px]`}>{item.title}</div>
                 </div>
-                <div className="flex items-center justify-between ml-8">
-                  <div className="w-[60px] mr-8 h-[60px] md:border-2 border border-[#878AB6] rounded-full flex items-center justify-center text-3xl text-yellow-200">{item.icon}</div>
-                  <p className=" font-semibold text-[#878AB6] w-[330px]">{item.description}</p>
+                <div className="flex items-center justify-between md:ml-8 ml-0">
+                  <div className="w-[60px] md:mr-8 mr-4 h-[60px] md:border-2 border border-[#878AB6] rounded-full flex items-center justify-center text-3xl text-yellow-200">{item.icon}</div>
+                  <p className=" font-semibold text-[#878AB6] sm:w-[330px] w-[230px]">{item.description}</p>
                 </div>
                 <div className="flex items-center gap-4 ">
-                  <div className="flex gap-4 flex-wrap w-[240px]">
+                  <div className="flex gap-4 flex-wrap min-1380px:w-[240px] w-full items-center justify-center">
                     {item.tag.map((tag) => {
                       return <div className="  py-2 px-4 md:border-2 border text-[#878AB6] border-[#878ab6] font-semibold rounded-3xl">{tag}</div>;
                     })}
