@@ -1,7 +1,6 @@
 "use client";
-import { useSession } from "next-auth/react";
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+// import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { emailsend } from "../../../server/contact";
 import Label from "./Label";
@@ -73,14 +72,9 @@ const Form = () => {
           label={"Descripon of the project"}
           name="description"
         />
-        <input
-          type="hidden"
-          name="topic"
-          value={topic}
-        />
         <button
           type="submit"
-          disabled={session?.user == undefined || loading === true ? true : false}
+          disabled={loading === true ? true : false}
           className="w-full  disabled:opacity-50 text-center  mt-3 bg-gradient-to-br from-[#7838ec] to-[#2547fd] py-3 px-5 rounded-[10px]"
         >
           Submit

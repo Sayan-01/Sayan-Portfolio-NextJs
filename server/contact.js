@@ -1,6 +1,7 @@
 "use server";
 
-import contactEmailSend from "@/lib/contactEmailSend";
+import contactEmailSend from "../lib/contactEmailSend";
+
 
 export const emailsend = async (fromdata) => {
   const name = await fromdata.get("name");
