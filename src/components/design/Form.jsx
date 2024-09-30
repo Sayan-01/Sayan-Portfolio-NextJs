@@ -1,12 +1,48 @@
-import React from "react";
+"use client";
+import { useSession } from "next-auth/react";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
+import { emailsend } from "../../../server/contact";
 import Label from "./Label";
 
 const Form = () => {
+  const router = useRouter();
+  const [responseMessage, setResponseMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  // const { toast } = useToast();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setResponseMessage("");
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+    const result = await emailsend(formData);
+
+    if (result?.error) {
+      setResponseMessage(result.error);
+      setLoading(false);
+      toast({
+        variant: "destructive",
+        title: result.error,
+        description: "Try to filled all of filds",
+      });
+    } else if (result?.message) {
+      setResponseMessage(result.error);
+      toast({
+        title: "Uh oh! Connection send ",
+        description: "Thanks for choosing us to enhance your dream",
+      });
+      router.push("/");
+    }
+  };
+
   return (
     <div className="lg:w-[90%] w-full  border border-[#1c1c41] bg-[#0d002e71] p-5 pt-10 pb-12 rounded-xl ">
       <form
         className="flex flex-col gap-4"
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <CustomInput
@@ -20,7 +56,7 @@ const Form = () => {
             name={"email"}
           />
         </div>
-        <div className="grid grid-cols-2 gap-x-5">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-y-5 gap-x-5">
           <CustomInput
             placeHolder={"Tell your budget (USD)"}
             label={"Budget"}
@@ -40,16 +76,16 @@ const Form = () => {
         <input
           type="hidden"
           name="topic"
-          // value={topic}
+          value={topic}
         />
         <button
           type="submit"
-          // disabled={session?.user == undefined || loading === true ? true : false}
+          disabled={session?.user == undefined || loading === true ? true : false}
           className="w-full  disabled:opacity-50 text-center  mt-3 bg-gradient-to-br from-[#7838ec] to-[#2547fd] py-3 px-5 rounded-[10px]"
         >
           Submit
         </button>
-        {/* {responseMessage && <div className="mt-1 mb-0 text-red-500 text-[0.8rem] font-medium">{responseMessage}</div>} */}
+        {responseMessage && <div className="mt-1 mb-0 text-red-500 text-[0.8rem] font-medium">{responseMessage}</div>}
       </form>
     </div>
   );
