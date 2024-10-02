@@ -18,7 +18,7 @@ const Contact = () => {
           {/* left-side */}
           <div className="w-full items-start flex flex-col">
             <div className="px-5 py-2 md:mt-0 my-6 rounded-full bg-gradient-to-r from-[#191e47] via-[#2b1d72] font-semibold">Conatct</div>
-            <p className="text-white/60 md:max-w-[80%] ">Connect with Azeorex for innovative web design, impactful branding, and dedicated expert support to elevate your brand.</p>
+            <p className="text-white/60 md:max-w-[80%] ">Connect with Me for innovative web design, impactful branding, and dedicated expert support to elevate your brand.</p>
             <div className="my-8 flex lg:flex-row flex-col gap-10">
               <div>
                 {contact_feature.map((item) => {

@@ -21,7 +21,7 @@ const Services = () => {
     >
       <div className="container -mt-16 md:mt-0 md:mb-[10rem] mb-10">
         <h2 className="h2 w-full md:text-center">List of All Services That I Provid.</h2>
-        <p className="body-2 text-n-4 md:text-center md:mb-20 mb-[56px] mt-4">Brainwave unlocks the potential of AI-powered applications</p>
+        <p className="body-2 text-n-4 md:text-center md:mb-20 mb-[56px] mt-4">Modern tech unlocks the potential of Web applications</p>
         <div className="relative">
           <div className="relative z-1 flex items-center h-[39rem] p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem] ">
             <div className="w-full h-full absolute left-0 pointer-events-none md:w-3/5 xl:w-auto">

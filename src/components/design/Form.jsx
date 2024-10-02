@@ -38,7 +38,7 @@ const Form = () => {
   };
 
   return (
-    <div className="lg:w-[90%] w-full  border border-[#1c1c41] bg-[#0d002e71] p-5 pt-10 pb-12 rounded-xl ">
+    <div className="lg:w-[90%] w-full  border border-[#2a233ebc] bg-[#050505] p-5 pt-10 pb-12 rounded-xl ">
       <form
         className="flex flex-col gap-4"
         onSubmit={handleSubmit}
@@ -75,7 +75,7 @@ const Form = () => {
         <button
           type="submit"
           disabled={loading === true ? true : false}
-          className="w-full  disabled:opacity-50 text-center  mt-3 bg-gradient-to-br from-[#7838ec] to-[#2547fd] py-3 px-5 rounded-[10px]"
+          className="w-full  disabled:opacity-50 text-center  mt-3 bg-gradient-to-r from-[#7738ec] to-[#f165e7] py-3 px-5 rounded-[10px] hover:opacity-90 duration-200"
         >
           Submit
         </button>
@@ -93,7 +93,7 @@ const CustomInput = ({ className, placeHolder, label, type, name }) => {
         <>
           <textarea
             placeholder={placeHolder}
-            className={`w-full mt-3 bg-[#0d0f2c] border border-[#1c1c41] px-5 py-2 rounded-[10px] outline-none h-20 focus:bg-none ${className}`}
+            className={`w-full mt-3 bg-[#14121c] border border-[#2a233ebc] px-5 py-2 rounded-[10px] outline-none h-20 focus:bg-none ${className}`}
             name={name}
           />
         </>
@@ -101,7 +101,7 @@ const CustomInput = ({ className, placeHolder, label, type, name }) => {
         <>
           <input
             placeholder={placeHolder}
-            className={`w-full mt-3 bg-[#0d0f2c] border border-[#1c1c41] py-3 px-5 rounded-[10px] outline-none focus:bg-none ${className}`}
+            className={`w-full mt-3 bg-[#14121c] border border-[#2a233ebc] py-3 px-5 rounded-[10px] outline-none focus:bg-none ${className}`}
             name={name}
           />
         </>
