@@ -22,17 +22,17 @@ const Form = () => {
     if (result?.error) {
       setResponseMessage(result.error);
       setLoading(false);
-      toast({
-        variant: "destructive",
-        title: result.error,
-        description: "Try to filled all of filds",
-      });
+      // toast({
+      //   variant: "destructive",
+      //   title: result.error,
+      //   description: "Try to filled all of filds",
+      // });
     } else if (result?.message) {
       setResponseMessage(result.error);
-      toast({
-        title: "Uh oh! Connection send ",
-        description: "Thanks for choosing us to enhance your dream",
-      });
+      // toast({
+      //   title: "Uh oh! Connection send ",
+      //   description: "Thanks for choosing us to enhance your dream",
+      // });
       router.push("/");
     }
   };
