@@ -57,7 +57,9 @@ const Skills = () => {
           <Link href={"#contact"}>
             <Button className={" font-code text-xs font-bold"}>Contact Me</Button>
           </Link>
-          <p className="body-2 text-n-4 lg:w-[22rem]  mt-10">With MERN stack and Next js convert your website faster and feature reach. Also by using those stack websites are more scalable then other website.</p>
+          <p className="body-2 text-n-4 lg:w-[24rem]  mt-10">
+            Utilizing the MERN stack and Next.js, I can enhance your website's performance with advanced features while ensuring superiorscalability.
+          </p>
         </div>
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
           <div className="  relative left-1/2 flex md:w-[32rem] w-[22.1rem] aspect-square rounded-full -translate-x-1/2 scale:75 md:scale-100 -top-10 md:top-0  md:mt-10 lg:mt-6 mt-20">
